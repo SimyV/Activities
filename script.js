@@ -59,7 +59,7 @@ const init = function () {
 
 generateActivity.addEventListener("click", function () {
   newImage = Math.trunc(Math.random() * currentActivity.length) + 1;
-  console.log(newImage);
+  // console.log(newImage);
 
   imageChange.classList.remove("hidden");
   imageChange.src = `/images/image-${newImage}.png`;
