@@ -61,7 +61,7 @@ generateActivity.addEventListener("click", function () {
   newImage = Math.trunc(Math.random() * currentActivity.length) + 1;
 
   imageChange.classList.remove("hidden");
-  imageChange.src = `/images/image-${newImage}.png`;
+  imageChange.src = `images/image-${newImage}.png`;
 
   if (newImage === 1) {
     document.getElementById((textChange.textContent = currentActivity[0]));
