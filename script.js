@@ -7,6 +7,9 @@ const generateActivity = document.querySelector(".btn--roll");
 const finish = document.querySelector(".btn--hold");
 const diceEl = document.querySelector(".dice");
 
+//Starting conditions
+diceEl.classList.add("hidden");
+
 let newImage;
 const currentActivity = [
   "We're going to a brewery!",
@@ -53,8 +56,8 @@ const currentActivity = [
 ];
 
 const init = function () {
-  imageChange.classList.add("hidden");
   textChange.textContent = "What fun activity are we doing today?";
+  diceEl.classList.add("hidden");
 };
 
 generateActivity.addEventListener("click", function () {
@@ -63,6 +66,7 @@ generateActivity.addEventListener("click", function () {
   imageChange.classList.remove("hidden");
   imageChange.src = `images/image-${newImage}.png`;
 
+  // Figure out if you can loop this
   if (newImage === 1) {
     document.getElementById((textChange.textContent = currentActivity[0]));
   } else if (newImage === 2) {
